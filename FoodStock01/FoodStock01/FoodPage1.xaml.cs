@@ -54,7 +54,7 @@ namespace FoodStock01
             s = "http://cookpad.com/search/";
             InitializeComponent();
             */
-            var result = await DisplayAlert("削除", "この食材を削除しますか", "OK", "キャンセル");
+            var result = await DisplayAlert("削除", "この食材を削除しますか", "OK", "キャンセル");//
             if (result == true)
             {
                 int f_no = int.Parse(no);
