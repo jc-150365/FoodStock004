@@ -61,7 +61,7 @@ namespace FoodStock01
                 FoodModel.DeleteFood(f_no);
 
                 Title = "食材リスト";
-                s = "http://cookpad.com/search/";
+                s = "http://cookpad.com/search/";//
 
                 InitializeComponent();
             }
