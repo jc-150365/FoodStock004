@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 
 using Android.App;
 using Android.Content.PM;
@@ -25,4 +25,4 @@ namespace FoodStock01.Droid
         }
     }
 }
-
+*/
