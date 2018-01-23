@@ -21,8 +21,6 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
-
-            base.OnAppearing();//試し
         }
 
         /****************通知の試し**************************************************/
