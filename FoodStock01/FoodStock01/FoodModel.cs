@@ -138,7 +138,7 @@ namespace FoodStock01
         }
 
         /************************************ここから通知を試すためのセレクトメソッド************************************/
-        /*public static int SelectF_result()
+        public static int SelectF_result()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
@@ -148,7 +148,7 @@ namespace FoodStock01
 
                     setting = SettingModel.SelectSetting_Max();
 
-                    List<SettingModel> resultList = db.Query<FoodModel>("SELECT [F_result] FROM [Food] WHERE [F_result] = " + setting) ;
+                    List<FoodModel> resultList = db.Query<FoodModel>("SELECT [F_result] FROM [Food] WHERE [F_result] = " + setting) ;
 
                     int[] resultArray = new int[100];
 

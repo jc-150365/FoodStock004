@@ -22,15 +22,16 @@ namespace FoodStock01
 
             InitializeComponent();
 
+            base.OnAppearing();//試し
         }
 
-        /****************通知の試し************************/
+        /****************通知の試し**************************************************/
         protected override void OnAppearing()
         {
             //base.OnAppearing();
             DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");    
         }
-        /**************************************************************/
+        /****************************************************************************/
 
         void ChackBoxChanged(object sender, bool isChecked)
         {
@@ -62,6 +63,7 @@ namespace FoodStock01
             s = "http://cookpad.com/search/";
             InitializeComponent();
             */
+
             var result = await DisplayAlert("削除", "この食材を削除しますか", "OK", "キャンセル");//
             if (result == true)
             {
