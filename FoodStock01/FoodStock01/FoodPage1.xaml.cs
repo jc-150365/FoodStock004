@@ -38,7 +38,7 @@ namespace FoodStock01
         {
             if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0)
             {
-                //base.OnStart();
+                base.OnStart();
                 DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
             }
         }
