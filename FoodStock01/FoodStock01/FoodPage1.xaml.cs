@@ -33,12 +33,11 @@ namespace FoodStock01
         }
         /****************************************************************************/
 
-        /****************通知の試し02**************************************************/
-        protected override void OnStart()
+        /****************通知の試し02（まだ途中）**************************************************/
+        protected void OnStart()
         {
             if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0)
             {
-                base.OnStart();
                 DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
             }
         }
