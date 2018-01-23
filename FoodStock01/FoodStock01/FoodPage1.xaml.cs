@@ -15,32 +15,23 @@ namespace FoodStock01
     {
         String s = "http://cookpad.com/search/";
 
+        int flug = 0;//通知フラグ（試し）
+
         public FoodPage1(string title)
         {
             //タイトル
             Title = title;
 
             InitializeComponent();
-
-            OnStart();
         }
 
         /****************通知の試し01（これはタブ切り替えの度にポップアップが出るけどDBの処理はできてる）*************/
-        /*protected override void OnAppearing()
+        protected override void OnAppearing()
         {
-            if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0)
+            if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0 && flug != 1)
             {
                 DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
-            }
-        }
-        /****************************************************************************/
-
-        /****************通知の試し02（まだ途中）**************************************************/
-        protected void OnStart()
-        {
-            if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0)
-            {
-                DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
+                flug = 1;
             }
         }
         /****************************************************************************/
