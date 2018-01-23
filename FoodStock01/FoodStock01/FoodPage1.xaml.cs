@@ -23,11 +23,22 @@ namespace FoodStock01
             InitializeComponent();
         }
 
-        /****************通知の試し**************************************************/
-        protected override void OnAppearing()
+        /****************通知の試し01（これはタブ切り替えの度にポップアップが出るけどDBの処理はできてる）*************/
+        /*protected override void OnAppearing()
         {
             if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0)
             {
+                DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
+            }
+        }
+        /****************************************************************************/
+
+        /****************通知の試し02**************************************************/
+        protected override void OnStart()
+        {
+            if (FoodModel.SelectF_result() != null && FoodModel.SelectF_result() > 0)
+            {
+                //base.OnStart();
                 DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
             }
         }
