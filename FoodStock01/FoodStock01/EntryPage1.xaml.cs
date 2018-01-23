@@ -48,12 +48,12 @@ namespace FoodStock01
             }
         }
 
-        /***いらないか***/
+        /***いらないか********/
         public EntryPage1()
         {
 
         }
-        /*******↑********/
+        /*********************/
 
         void SelectSwitch(object sender, ToggledEventArgs args)
         {
