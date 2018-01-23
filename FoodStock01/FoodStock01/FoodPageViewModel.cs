@@ -12,10 +12,6 @@ namespace FoodStock01
 {
     class FoodPageViewModel
     {
-        /******試し**************/
-        string message = "";
-        /******試し**************/
-
         public ObservableCollection<Food> Foods
         {
             get;
@@ -24,13 +20,6 @@ namespace FoodStock01
 
         public FoodPageViewModel()
         {
-            /******************************ここから通知試し*****************************/
-            if(FoodModel.SelectF_result > 0 && FoodModel.SelectF_result != null)
-            {
-                message = "期限が近づいている食材があります";
-            }
-            /******************************ここまで通知試し*****************************/
-
             if (FoodModel.SelectFood() != null)
             {
                 var query01 = FoodModel.SelectFood();

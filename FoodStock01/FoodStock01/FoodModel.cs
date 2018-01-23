@@ -138,13 +138,12 @@ namespace FoodStock01
         }
 
         /************************************ここから通知を試すためのセレクトメソッド************************************/
-        public static int SelectF_result()
+        /*public static int SelectF_result()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    /**********試し*************/
                     int setting = 100;
 
                     setting = SettingModel.SelectSetting_Max();
@@ -165,18 +164,16 @@ namespace FoodStock01
 
                     result = resultArray[0];
 
-                    //データベースに指定したSQLを発行
                     return result;
 
                 }
                 catch (Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);
-                    //return null;
                     return -999;
                 }
             }
-        }
+        }*/
         /************************************ここまで通知を試すためのセレクトメソッド************************************/
     }
 }

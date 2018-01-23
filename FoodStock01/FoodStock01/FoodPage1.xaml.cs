@@ -27,13 +27,8 @@ namespace FoodStock01
         /****************通知の試し************************/
         protected override void OnAppearing()
         {
-            //var query = FoodModel.SelectFood02();
             base.OnAppearing();
-            //設定した通知日数に合致する食材あればアラート↓
-              //if(query >= 1)
-              //{
-                DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");
-               //}      
+            DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");    
         }
         /**************************************************************/
 
