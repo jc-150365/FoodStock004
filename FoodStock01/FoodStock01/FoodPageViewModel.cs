@@ -12,6 +12,9 @@ namespace FoodStock01
 {
     class FoodPageViewModel
     {
+        /******試し**************/
+        string message = "";
+        /******試し**************/
 
         public ObservableCollection<Food> Foods
         {
@@ -19,41 +22,15 @@ namespace FoodStock01
             private set;
         }
 
-
         public FoodPageViewModel()
         {
-            /*************おかしくなったらここを解除****************/
-            /*
-            if (FoodModel.SelectFood() != null)
+            /******************************ここから通知試し*****************************/
+            if(FoodModel.SelectF_result > 0 && FoodModel.SelectF_result != null)
             {
-                
-                var query = FoodModel.SelectFood();
-                Foods = new ObservableCollection<Food>();
-                foreach (var food in query)
-                {
-                    Food f = new Food
-                    {
-                        F_no = food.F_no,
-                        F_name = food.F_name,
-                        F_result = food.F_result,
-                        F_date = food.F_date
-                    };
-                    Foods.Add(f);
-                }
+                message = "期限が近づいている食材があります";
             }
-            else
-            {
-                Foods = new ObservableCollection<Food> {
-                    new Food {
-                       F_name = "NoData",
-                       //F_date = new DateTime(1970,1,1)
-                       F_result = 999
-                    }
-                };
-            }
-            */
+            /******************************ここまで通知試し*****************************/
 
-            /**********************ダメだったらここを消す********************/
             if (FoodModel.SelectFood() != null)
             {
                 var query01 = FoodModel.SelectFood();
@@ -86,8 +63,6 @@ namespace FoodStock01
                     };
                     Foods.Add(f02);
                 }
-
-
             }
             else
             {
@@ -99,12 +74,8 @@ namespace FoodStock01
                     }
                 };
             }
-            /****************************************************************/
-
         }
-
     }
-
 
     public class Food
     {

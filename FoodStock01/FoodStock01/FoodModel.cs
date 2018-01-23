@@ -23,7 +23,7 @@ namespace FoodStock01
 
         public TimeSpan F_span { get; set; } //現在日時との差（後で使うかも）
 
-        /********************インサートメソッド**********************/
+        /********************インサートメソッド**********************************/
         public static void InsertFood(int f_no, string f_name, int f_result, DateTime f_date)
         {
             //データベースに接続する
@@ -136,5 +136,47 @@ namespace FoodStock01
                 }
             }
         }
+
+        /************************************ここから通知を試すためのセレクトメソッド************************************/
+        public static int SelectF_result()
+        {
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+                try
+                {
+                    /**********試し*************/
+                    int setting = 100;
+
+                    setting = SettingModel.SelectSetting_Max();
+
+                    List<SettingModel> resultList = db.Query<FoodModel>("SELECT [F_result] FROM [Food] WHERE [F_result] = " + setting) ;
+
+                    int[] resultArray = new int[100];
+
+                    int result = -999;
+
+                    int i = 0;
+
+                    foreach (FoodModel fdm in resultList)
+                    {
+                        resultArray[i] = fdm.F_result;
+                        i++;
+                    }
+
+                    result = resultArray[0];
+
+                    //データベースに指定したSQLを発行
+                    return result;
+
+                }
+                catch (Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine(e);
+                    //return null;
+                    return -999;
+                }
+            }
+        }
+        /************************************ここまで通知を試すためのセレクトメソッド************************************/
     }
 }

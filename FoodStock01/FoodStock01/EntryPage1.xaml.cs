@@ -15,7 +15,7 @@ namespace FoodStock01
         /***ここからフィールド***/
         DateTime yyyymmdd; //フードピッカーの値を一時的に保持する
 
-        TimeSpan s; //後で使うかも
+        TimeSpan s; //一時的に使う
 
         DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);//現在日付
 
