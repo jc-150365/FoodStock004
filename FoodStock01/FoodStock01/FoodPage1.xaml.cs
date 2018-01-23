@@ -21,6 +21,8 @@ namespace FoodStock01
             Title = title;
 
             InitializeComponent();
+
+            OnStart();
         }
 
         /****************通知の試し01（これはタブ切り替えの度にポップアップが出るけどDBの処理はできてる）*************/
