@@ -48,7 +48,7 @@ namespace FoodStock01
             }
         }
 
-        /***いらないか********/
+        /***いらないか*********/
         public EntryPage1()
         {
 
