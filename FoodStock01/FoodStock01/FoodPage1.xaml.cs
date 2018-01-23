@@ -27,7 +27,7 @@ namespace FoodStock01
         /****************通知の試し************************/
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+            //base.OnAppearing();
             DisplayAlert("消費期限通知", "期限が近づいている食材があります", "OK");    
         }
         /**************************************************************/

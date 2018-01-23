@@ -138,7 +138,7 @@ namespace FoodStock01
         }
 
         /************************************ここから通知を試すためのセレクトメソッド************************************/
-        public static int SelectF_result()
+        /*public static int SelectF_result()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
